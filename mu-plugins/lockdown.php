@@ -13,7 +13,7 @@ class Lockdown {
 	 * @access public
 	 */
 	public function __construct() {
-		add_action( 'wp', 'force_guest_login' );
+		add_action( 'wp', array( $this, 'force_guest_login' ) );
 	}
 
 	/**
